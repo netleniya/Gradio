@@ -36,6 +36,8 @@ def calculate_bmi(height: float, weight: float) -> float:
 
 if __name__ == "__main__":
     interface = gr.Interface(
-        fn=calculate_bmi, inputs=["number", "number"], outputs=["number", "text"]
+        fn=calculate_bmi,
+        inputs=[gr.Number(label="Height (cm)"), gr.Number(label="Weight (kg)")],
+        outputs=[gr.Number(label="BMI"), gr.Textbox(label="Category")],
     )
     interface.launch()
