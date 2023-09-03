@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "gradio-ml"
+version = "0.1.0"
+description = "\"Build ML prototypes using Gradio\""
+authors = ["Peter Fiee <peterfiee@icloud.com>"]
+readme = "README.md"
+packages = [{include = "gradio_ml"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+gradio = "^3.42.0"
+mypy = "^1.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
