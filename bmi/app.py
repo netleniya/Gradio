@@ -34,10 +34,14 @@ def calculate_bmi(height: float, weight: float) -> float:
     return round(weight / height**2 * 10000, 1)
 
 
-if __name__ == "__main__":
+def main():
     interface = gr.Interface(
         fn=calculate_bmi,
         inputs=[gr.Number(label="Height (cm)"), gr.Number(label="Weight (kg)")],
         outputs=[gr.Number(label="BMI"), gr.Textbox(label="Category")],
     )
     interface.launch()
+
+
+if __name__ == "__main__":
+    main()
